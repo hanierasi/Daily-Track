@@ -113,3 +113,44 @@ html,body{
     font-size: 13px;
     margin-bottom: 0;
 }
+.my-habits{
+    background-color: #EFF5BF;
+    padding: 25px;
+    border-radius: 30px;
+    margin-top: 25px;
+    max-width: 600px;
+}
+.my-habits h2{
+    color:#373B0C;
+    margin-top: 0;
+}
+.habit_list{
+    display: flex;
+    flex-direction: column;
+    gap :12px;
+}
+.habit_item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FCFCE6;
+    padding: 18px 20PX;
+    border: 1px solid #E2E8C5;
+    border-radius: 12px;
+    color:#48752C;
+    transition: background-color 0.2s ease;
+}
+.habit_item input{
+    width:18px;
+    height: 18px;
+    accent-color: #789B42;
+    cursor: pointer;
+}
+.habit_item:has(input:checked) {
+    background-color: #EAF0B6;
+    border-color: #789B42;
+}
+.habit_item:has(input:checked) span{
+    color:#789B42;
+    font-weight: 600;
+}
