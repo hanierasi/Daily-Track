@@ -13,7 +13,6 @@ body {
     align-items: stretch;
 }
 
-
 /* Sidebar */
 .sidebar {
     width: 200px;
@@ -81,21 +80,58 @@ body {
 }
 
 .home-header {
-    margin-top: 0;
-    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin: 15px 0 30px;
 }
 
-.home-header h1 {
-    font-size: 28px;
+.welcome-message h1{
     color: #373B0C;
-    margin-bottom: 8px;
+    font-size: 28px;
+    margin: 0 0 8px;
 }
 
-.home-header p {
-    margin-top: 0;
+.welcome-message p {
+    margin: 0;
     color: #8E993D;
 }
 
+.header-actions{
+    display: flex;
+    align-items: center;
+    gap : 8px;
+    margin-left: auto;
+}
+
+.date-info{
+    display:flex;
+    flex-direction:column ;
+    gap: 5px;
+    color: #373B0C;
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+    width: auto;
+}
+
+.date-info span {
+    color: #8E993D;
+}
+
+.profile-button{
+    width: 42px;
+    height:42px ;
+    border:none ;
+    border-radius: 50%;
+    background-color: #EAF0B6;
+    cursor: pointer ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
 
 /* Daily Progress */
 .daily-progress {
@@ -103,7 +139,8 @@ body {
     padding: 25px;
     border-radius: 30px;
     margin-top: 25px;
-    max-width: 750px;
+    max-width: none;
+    width: 100%;
     box-sizing: border-box;
 }
 
@@ -119,22 +156,18 @@ body {
     gap: 25px;
 }
 
-
 /* Circular Progress */
 .progress-circle {
     width: 90px;
     height: 90px;
     border-radius: 50%;
-
     background: conic-gradient(
         #789B42 0% 65%,
         #EAF0B6 65% 100%
     );
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     flex-shrink: 0;
     position: relative;
 }
@@ -155,7 +188,6 @@ body {
     font-size: 18px;
 }
 
-
 /* Progress Details */
 .progress-details {
     flex: 1;
@@ -175,7 +207,6 @@ body {
     margin-bottom: 12px;
 }
 
-
 /* Horizontal Progress Bar */
 .progress-bar {
     width: 100%;
@@ -191,7 +222,6 @@ body {
     background-color: #789B42;
     border-radius: 20px;
 }
-
 
 /* Progress Statistics */
 .progress-stats {
@@ -224,14 +254,14 @@ body {
     margin-top: 18px;
 }
 
-
 /* My Habits */
 .my-habits {
     background-color: #EFF5BF;
     padding: 25px;
     border-radius: 30px;
     margin-top: 25px;
-    max-width: 750px;
+    max-width: none;
+    width: 100%;
     box-sizing: border-box;
 }
 
@@ -241,142 +271,98 @@ body {
     margin-bottom: 20px;
 }
 
-
 /* Habit List */
 .habit-list {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2,minmax(0,1fr));
     gap: 12px;
 }
-
 
 /* Habit Card */
 .habit-item {
     display: flex;
     align-items: center;
     gap: 12px;
-
     background-color: #FCFCE6;
     padding: 15px 18px;
-
     border: 1px solid #E2E8C5;
     border-radius: 12px;
-
     color: #48752C;
     transition: background-color 0.2s ease,
                 border-color 0.2s ease;
-
     box-sizing: border-box;
 }
 
-
 /* Habit Icon */
 .habit-icon {
-
     width: 42px;
-
     height: 42px;
-
     background-color: #EAF0B6;
-
     border-radius: 12px;
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
     flex-shrink: 0;
-
 }
 
 .habit-icon img {
-
     width: 26px;
-
     height: 26px;
-
     object-fit: contain;
-
 }
 
 .habit-icon span {
-
     font-size: 20px;
-
 }
 
 /* Habit Details */
-
 .habit-details {
-
     flex: 1;
-
     min-width: 0;
-
 }
 
 .habit-details span {
-
     color: #373B0C;
-
     font-weight: 600;
-
 }
 
 .habit-details p {
-
     color: #8E993D;
-
     font-size: 12px;
-
     margin: 5px 0 0;
-
 }
 
 /* Checkbox */
-
 .habit-item input {
-
     width: 18px;
-
     height: 18px;
-
     accent-color: #789B42;
-
     cursor: pointer;
-
     flex-shrink: 0;
-
 }
 
 /* Completed Habit */
-
 .habit-item:has(input:checked) {
-
     background-color: #EAF0B6;
-
     border-color: #789B42;
-
 }
 
 .habit-item:has(input:checked) .habit-details span {
-
     color: #789B42;
-
     font-weight: 600;
-
 }
+
 .habit-header{
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
 }
+
 .habit-header h2{
     margin: 0;
 }
+
 /*Add Habit Button */
 .add-habit-button{
     background-color: #789B42;
@@ -389,23 +375,38 @@ body {
     cursor: pointer;
     transition: background-color 0.2s ease;
 }
+
 .add-habit-button:hover {
     background-color: #48752C;
 }
-/* Weekly Progress */
 
+.habit-menu{
+    width: 28px;
+    height:32px ;
+    border: none;
+    background-color:transparent ;
+    color:#68752F ;
+    cursor: pointer ;
+    display: flex ;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border-radius: 6px;
+    flex-shrink: 0;
+}
+
+/* Weekly Progress */
 .weekly-progress {
     background-color: #EFF5BF;
     padding: 25px;
     border-radius: 30px;
     margin-top: 25px;
-    max-width: 750px;
-    width: 100%;
     box-sizing: border-box;
+    max-width: none;
+    width: 50%;
 }
 
 /* Title */
-
 .weekly-title {
     display: flex;
     align-items: center;
@@ -425,7 +426,6 @@ body {
 }
 
 /* Weekly Content */
-
 .weekly-content {
     display: flex;
     align-items: center;
@@ -435,7 +435,6 @@ body {
 }
 
 /* Seven Bars */
-
 .weekly-bars {
     display: flex;
     align-items: center;
@@ -459,7 +458,6 @@ body {
 }
 
 /* Weekly Summary */
-
 .weekly-summary {
     flex-shrink: 0;
     text-align: left;
