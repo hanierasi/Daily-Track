@@ -392,3 +392,92 @@ body {
 .add-habit-button:hover {
     background-color: #48752C;
 }
+/* Weekly Progress */
+
+.weekly-progress {
+    background-color: #EFF5BF;
+    padding: 25px;
+    border-radius: 30px;
+    margin-top: 25px;
+    max-width: 750px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Title */
+
+.weekly-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.weekly-title h2 {
+    color: #373B0C;
+    margin: 0;
+    font-size: 22px;
+}
+
+.weekly-icon img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+/* Weekly Content */
+
+.weekly-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+/* Seven Bars */
+
+.weekly-bars {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    height: 120px;
+    flex: 1;
+    min-width: 0;
+}
+
+.weekly-bar {
+    width: 28px;
+    height: 50%;
+    background-color: #E2E5D2;
+    border-radius: 20px;
+    flex: 1;
+    max-width: 28px;
+}
+
+.weekly-bar.completed {
+    background-color: #789B42;
+}
+
+/* Weekly Summary */
+
+.weekly-summary {
+    flex-shrink: 0;
+    text-align: left;
+}
+
+.weekly-summary h3 {
+    color: #373B0C;
+    font-size: 25px;
+    margin: 0;
+}
+
+.weekly-summary h3 span {
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.weekly-summary p {
+    color: #8E993D;
+    font-size: 14px;
+    margin-top: 8px;
+}
